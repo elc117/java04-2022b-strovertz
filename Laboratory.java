@@ -1,3 +1,4 @@
+import java.time.chrono.ChronoZonedDateTime;
 import java.util.ArrayList;
 
 public class Laboratory {
@@ -36,20 +37,30 @@ public class Laboratory {
     // de cada um dos estudantes e professores
     ArrayList<String> contacts = new ArrayList<>();
 
-    contacts.add("99555");
-    
+    for(int i = 0; i < students.size(); i++) {
+        contacts.add(students.get(i).getContactInfo());
+    }  
+    for(int i = 0; i < professors.size(); i++) {
+        contacts.add(professors.get(i).getContactInfo());
+    } 
     return contacts;
   }
 
   public boolean userExists(String userId) {
     // COMPLETE-ME
     // Verifique se existe o userId na lista de estudantes ou de professores
-    for (int i = 0; i < professors.size(); i++) {
+    for (int i = 0; i < students.size(); i++) {
         if(userId == students.get(i).getUserId()){
             return false;
         }
-      }
+    }
+    for (int i = 0; i < professors.size(); i++) {
+        if(userId == professors.get(i).getUserId()){
+            return false;
+        }
+    }
     return true;
+    
   }
 
   public int countMembers() {
