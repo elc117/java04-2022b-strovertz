@@ -39,10 +39,10 @@ public class Laboratory {
 
     for(int i = 0; i < students.size(); i++) {
         contacts.add(students.get(i).getContactInfo());
-    }  
+    }
     for(int i = 0; i < professors.size(); i++) {
         contacts.add(professors.get(i).getContactInfo());
-    } 
+    }
     return contacts;
   }
 
