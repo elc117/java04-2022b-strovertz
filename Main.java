@@ -4,7 +4,7 @@ public class Main {
   public static void main(String[] args) {
     Student s1 = new Student("Nome1 Sobrenome1", "username1", "course1");
     Student s2 = new Student("Nome2 Sobrenome2", "username2", "course2");
-    Professor p = new Professor("Andrea Charao", "andrea", "376", "Anexo B");
+    Professor p = new Professor("andrea Charao", "andrea", "376", "Anexo B");
     Laboratory lab = new Laboratory("NCC");
     lab.addMember(s1);
     lab.addMember(s2);
